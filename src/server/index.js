@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const favicon = require("serve-favicon");
+// const favicon = require("serve-favicon");
 
 class Server {
   constructor() {
@@ -18,8 +18,8 @@ class Server {
   middlewares() {
     this.app.use(cors());
     this.app.use(express.json());
-    this.app.use(express.static("public"));
-    this.app.use(favicon(__dirname + "/../assets/favicon.ico"));
+    // this.app.use(express.static("public"));
+    // this.app.use(favicon(__dirname + "/../assets/favicon.ico"));
   }
 
   routes() {
