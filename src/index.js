@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.use(favicon(__dirname + "/favicon.ico"));
 
 // 3. RUTAS
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
     return res.json({
         message: "Hola mundo"
     })
