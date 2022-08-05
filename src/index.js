@@ -13,7 +13,7 @@ app.use(express.json());
 // 3. RUTAS
 app.get("/", (req, res) => {
     return res.json({
-        message: "Hola mundo"
+        message: "Hola mundos"
     })
 });
 app.use("/api/users", require("./routes/users.routes"));
