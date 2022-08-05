@@ -2,7 +2,6 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const favicon = require("serve-favicon");
 const app = express();
 const PORT = process.env.PORT || 4000;
 
@@ -13,7 +12,8 @@ app.use(express.json());
 // 3. RUTAS
 app.get("/", (req, res) => {
     return res.json({
-        message: "Hola mundo"
+        message: "Hola mundo",
+        secret: process.env.SECRET
     })
 });
 app.use("/api/users", require("./routes/users.routes"));
