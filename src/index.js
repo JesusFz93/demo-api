@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const favicon = require("serve-favicon");
 const app = express();
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4000;
 
 // 2. MIDDLEWARES
 app.use(cors());
