@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 4001;
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
-app.use(favicon(__dirname + "/../assets/favicon.ico"));
+app.use(favicon(__dirname + "/./assets/favicon.ico"));
 
 // 3. RUTAS
 app.use("/", (req, res) => {
