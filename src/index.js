@@ -6,10 +6,15 @@ const app = express();
 const PORT = process.env.PORT || 4001;
 
 // 2. MIDDLEWARES
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // 3. RUTAS
+app.use("/", (req, res) => {
+    return res.json({
+        message: "Hola mundo"
+    })
+});
 app.use("/api/users", require("./routes/users.routes"));
 
 
