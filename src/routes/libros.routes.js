@@ -9,7 +9,7 @@ const {
 const router = Router();
 router.get("/", obtenerLibros);
 router.post("/", crearLibros);
-router.put("/", actualizarLibro);
+router.put("/:nombrelibro/:idlibro", actualizarLibro);
 router.delete("/", eliminarlibro);
 
 module.exports = router;

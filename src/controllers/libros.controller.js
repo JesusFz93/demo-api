@@ -29,8 +29,14 @@ const crearLibros = (req, res) => {
 };
 
 const actualizarLibro = (req, res) => {
+  const { nombrelibro, idlibro } = req.params;
+
   return res.json({
     msg: "libro actualizado",
+    data: {
+      nombrelibro: nombrelibro,
+      idlibro: idlibro,
+    },
   });
 };
 
